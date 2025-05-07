@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Opportunities</title>
+    <style>
+        /* General Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif; 
+            line-height: 1.6;
+            color: #333; 
+            background-color: #fff;
+            display: flex; 
+            flex-direction: column; 
+            min-height: 100vh; 
+        }
+
+        main {
+            flex-grow: 1; 
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px; 
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Highlight Color */
+        .text-highlight {
+            color: #4A90E2; 
+        }
+
+        /* Header & Navigation */
+        .site-header {
+            padding: 20px 0;
+            border-bottom: 1px solid #eee; 
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo { /* Used for header logo */
+            font-size: 1.8em; 
+            font-weight: bold;
+        }
+
+        .logo-cre {
+            color: #4A90E2; 
+        }
+
+        .logo-ooives {
+            color: #333; 
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 20px; 
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: #4A90E2; 
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background-color: #357ABD; 
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero-title { 
+            font-size: 3.5em; 
+            color: #000; 
+            margin-bottom: 40px;
+            line-height: 1.2;
+            font-weight: 300; 
+            font-style: italic; 
+        }
+
+        .hero-images {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; 
+            flex-wrap: wrap; 
+        }
+
+        .phone-mockup { 
+            max-width: 220px; 
+            height: auto;
+            border-radius: 20px; 
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); 
+            border: 3px solid #ccc; 
+            overflow: hidden; 
+        }
+
+        .phone-mockup img { 
+            display: block; 
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+        }
+
+        .phone-mockup-1 {
+            transform: rotate(-10deg) translateY(10px);
+        }
+
+        .phone-mockup-2 {
+            transform: rotate(10deg) translateY(-10px);
+        }
+
+        /* Tagline Section */
+        .tagline-section {
+            padding: 40px 0 0; 
+            text-align: center;
+        }
+
+        .tagline { 
+            font-size: 2em; 
+            color: #333;
+            line-height: 1.4;
+        }
+
+        .tagline .text-highlight { 
+            font-weight: bold;
+        }
+
+        /* Portfolio Showcase Section */
+        .portfolio-showcase-section {
+            padding: 40px 0 60px;
+        }
+
+        .showcase-title { 
+            font-size: 2em; 
+            color: #000;
+            margin-bottom: 30px;
+            line-height: 1.3;
+            font-weight: normal; 
+            text-align: left; 
+            font-style: italic; 
+        }
+
+        .showcase-title .text-highlight { 
+            font-weight: bold;
+        }
+        
+        .showcase-images {
+            display: flex;
+            justify-content: flex-start; 
+            gap: 20px; 
+            margin-bottom: 30px;
+            flex-wrap: nowrap; 
+            overflow-x: auto;  
+            padding-bottom: 10px; 
+        }
+
+        .showcase-image-item {
+            flex: 0 0 calc(33.333% - 14px); 
+            min-width: 180px; 
+            background-color: #f0f0f0; 
+            border-radius: 8px; 
+            overflow: hidden; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .showcase-image-item img {
+            width: 100%;
+            height: 100%; 
+            object-fit: cover; 
+            display: block;
+        }
+
+        .showcase-description {
+            font-size: 0.9em; 
+            color: #555;
+            line-height: 1.7;
+            max-width: 700px; 
+            margin-left: 0; 
+            margin-right: 0; 
+            text-align: left; 
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 60px 0;
+            background-color: #f9f9f9; 
+        }
+
+        .features-main-title { 
+            font-size: 2.5em; 
+            font-weight: 300; 
+            font-style: italic; 
+            color: #000;
+            text-align: left;
+            margin-bottom: 40px;
+        }
+
+        .features-content {
+            display: flex;
+            align-items: center; 
+            gap: 40px; 
+        }
+
+        .features-text-content {
+            flex: 1.5; 
+        }
+
+        .feature-item {
+            margin-bottom: 30px;
+        }
+        .feature-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .feature-item-title { 
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #4A90E2; 
+            margin-bottom: 8px;
+        }
+
+        .feature-item-description {
+            font-size: 0.95em;
+            color: #333; 
+            line-height: 1.6;
+        }
+
+        .features-image-content {
+            flex: 1; 
+            text-align: center; 
+        }
+
+        .features-image-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px; 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1); 
+        }
+
+        /* Call to Action (CTA) Section */
+        .cta-section {
+            padding: 60px 0;
+            text-align: center; 
+            background-color: #fff; 
+        }
+
+        .cta-title {
+            font-size: 2.2em; 
+            font-weight: 300; 
+            font-style: italic; 
+            color: #000; 
+            margin-bottom: 30px; 
+            line-height: 1.4;
+        }
+
+        .cta-title .text-highlight { 
+            font-weight: bold; 
+        }
+
+        /* App Gallery Section - REVISED STRUCTURE v2 */
+        .app-gallery-section {
+            padding: 60px 0;
+            background-color: #fff; /* Section background is white */
+        }
+
+        .app-gallery-layout { /* Parent container for top-row and logo-banner */
+            display: flex;
+            flex-direction: column; /* Stack top-row and logo-banner */
+            gap: 25px; /* Increased gap between top-row and logo-banner */
+            align-items: center; /* Center the content horizontally */
+        }
+
+        .app-gallery-top-row { /* Contains main-image and side-images */
+            display: flex;
+            flex-wrap: nowrap; /* Ensure main and side images stay in one row on desktop */
+            gap: 20px; /* Gap between tall phone and stack of snippets */
+            align-items: flex-start; /* Align top of phone with top of snippet stack */
+            width: 100%; /* Allow top row to take full width of container */
+            max-width: 900px; /* Max width for the top row content, adjust as needed */
+            justify-content: center; /* Center the two columns if they don't fill max-width */
+        }
+
+        .gallery-main-image-container { /* Tall phone mockup */
+            flex: 0 0 270px; /* Fixed width for the tall phone, no grow, no shrink */
+            /* width: 270px; /* Explicit width */
+        }
+        .gallery-main-image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px; /* Rounded corners for the phone */
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1); /* Subtle shadow */
+            display: block;
+        }
+
+        .gallery-side-images-container { /* Stack of 3 snippets */
+            flex: 1 1 auto; /* Grow to fill available space next to the phone */
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Gap between stacked image snippets */
+            max-width: 320px; /* Max width for the stack of snippets */
+        }
+        
+        .gallery-side-image-item { /* Individual snippet item */
+            background-color: #fff; /* Snippet background */
+            border-radius: 12px; /* Rounded corners for snippets */
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08); /* Subtle shadow for snippets */
+            overflow: hidden; /* Clip image to rounded corners */
+        }
+        .gallery-side-image-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .gallery-logo-banner-container { /* Logo banner at the bottom */
+            display: flex;
+            justify-content: center;
+            width: 100%; /* Take full width available in .app-gallery-layout */
+        }
+        .gallery-logo-banner-container img {
+            max-width: 100%; 
+            width: 700px; /* Desired width for the logo banner, can be up to container width */
+            height: auto;
+            border-radius: 12px; /* Rounded corners for logo banner */
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08); /* Subtle shadow */
+            display: block;
+        }
+
+
+        /* Footer Section - STYLES */
+        .site-footer-main {
+            background-color: #222; 
+            color: #f0f0f0; 
+            padding: 50px 0 30px; 
+            margin-top: auto; 
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: space-between; 
+            gap: 30px; 
+            margin-bottom: 40px; 
+        }
+
+        .footer-column {
+            flex: 1 1 200px; 
+            min-width: 180px; 
+        }
+
+        .footer-column h4 { 
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #fff; 
+            margin-bottom: 15px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #ccc; 
+            text-decoration: none;
+            font-size: 0.95em;
+            transition: color 0.3s ease;
+        }
+        .footer-column ul li a:hover {
+            color: #fff; 
+        }
+        
+        .footer-social-links { 
+            display: flex;
+            gap: 15px; 
+        }
+        .footer-social-links a {
+             color: #ccc;
+             text-decoration: none;
+             font-size: 0.95em;
+        }
+        .footer-social-links a:hover {
+            color: #fff;
+        }
+
+
+        .footer-bottom-logo {
+            text-align: center; 
+            padding-top: 30px; 
+            border-top: 1px solid #444; 
+        }
+
+        .footer-logo-text { 
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #fff;
+        }
+        .footer-logo-text .logo-cre { color: #4A90E2; }
+        .footer-logo-text .logo-ooives { color: #fff; } 
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .logo { font-size: 1.5em; }
+            .hero-title { font-size: 2.8em; }
+            .tagline { font-size: 1.5em; }
+            .showcase-title { font-size: 1.7em; }
+            .showcase-description { font-size: 0.85em; }
+
+            .phone-mockup {
+                max-width: 180px;
+                border-width: 2px; 
+            }
+            
+            .phone-mockup-1,
+            .phone-mockup-2 {
+                transform: rotate(0deg) translateY(0); 
+                margin-bottom: 20px;
+            }
+            
+            .hero-images {
+                flex-direction: column; 
+                gap: 30px;
+            }
+
+            /* Features Section Responsive */
+            .features-main-title {
+                font-size: 2em;
+                text-align: center; 
+            }
+            .features-content {
+                flex-direction: column; 
+                gap: 30px;
+            }
+            .features-text-content {
+                order: 2; 
+                text-align: left; 
+            }
+            .features-image-content {
+                order: 1; 
+                margin-bottom: 20px; 
+            }
+            .feature-item-title {
+                font-size: 1.3em;
+            }
+            .feature-item-description {
+                font-size: 0.9em;
+            }
+
+            /* CTA Section Responsive */
+            .cta-title {
+                font-size: 1.8em;
+            }
+
+            /* App Gallery Responsive */
+            .app-gallery-top-row {
+                flex-direction: column; /* Stack main phone and side images */
+                align-items: center; /* Center them when stacked */
+                gap: 20px;
+            }
+            .gallery-main-image-container {
+                flex-basis: auto; /* Reset basis */
+                width: 100%; 
+                max-width: 250px; 
+                /* margin-bottom: 20px; /* Gap handled by parent .app-gallery-top-row */
+            }
+            .gallery-side-images-container {
+                flex-basis: auto; /* Reset basis */
+                width: 100%;
+                max-width: 350px; 
+            }
+             .gallery-logo-banner-container img {
+                width: 90%; 
+                max-width: 500px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+                padding: 0 10px;
+            }
+            
+            .hero-title { font-size: 2.2em; }
+            .tagline { font-size: 1.3em; }
+            .showcase-title { font-size: 1.5em; }
+            .showcase-description { font-size: 0.8em; }
+            
+            .btn {
+                padding: 8px 16px;
+                font-size: 0.9em;
+            }
+
+            .phone-mockup {
+                max-width: 150px; 
+                border-width: 2px;
+            }
+            
+            .showcase-image-item {
+                 min-width: 150px; 
+            }
+
+            /* Features Section Responsive for very small screens */
+            .features-main-title {
+                font-size: 1.8em;
+            }
+            .feature-item-title {
+                font-size: 1.2em;
+            }
+            .feature-item-description {
+                font-size: 0.85em;
+            }
+
+            /* CTA Section Responsive for very small screens */
+            .cta-title {
+                font-size: 1.5em;
+            }
+
+            /* App Gallery Responsive for very small screens */
+             .gallery-main-image-container {
+                max-width: 220px; 
+            }
+            .gallery-side-images-container {
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="logo-cre">CRE</span><span class="logo-ooives">OOIVES</span>
+            </div>
+            <nav class="main-nav">
+                <a href="#" class="btn btn-primary">Get App</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h1 class="hero-title">Creative.<br>Opportunities.</h1>
+                <div class="hero-images">
+                    <div class="phone-mockup phone-mockup-1">
+                        <img src="https://placehold.co/250x500/e8e8e8/000000?text=Phone+Mockup+1" alt="App interface mockup on a smartphone">
+                    </div>
+                    <div class="phone-mockup phone-mockup-2">
+                        <img src="https://placehold.co/250x500/f0f0f0/000000?text=Phone+Mockup+2" alt="Another app interface mockup on a smartphone">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tagline-section">
+            <div class="container">
+                <p class="tagline">
+                    Where Every <span class="text-highlight">Portfolio</span><br>
+                    Unfolds A Unique Experience.
+                </p>
+            </div>
+        </section>
+
+        <section class="portfolio-showcase-section">
+            <div class="container">
+                <h2 class="showcase-title">
+                    Where Every <span class="text-highlight">Portfolio</span><br>
+                    Unfolds A Unique Tale Of<br>
+                    Creativity.
+                </h2>
+                <div class="showcase-images">
+                    <div class="showcase-image-item">
+                        <img src="https://placehold.co/350x450/D8BFD8/000000?text=Portfolio+Image+1" alt="Abstract art piece">
+                    </div>
+                    <div class="showcase-image-item">
+                        <img src="https://placehold.co/350x450/ADD8E6/000000?text=Portfolio+Image+2" alt="Photography setup">
+                    </div>
+                    <div class="showcase-image-item">
+                        <img src="https://placehold.co/350x450/E6E6FA/000000?text=Portfolio+Image+3" alt="Fashion accessories">
+                    </div>
+                </div>
+                <p class="showcase-description">
+                    Discover the stories within each portfolio, where creativity knows no bounds. 
+                    Explore a wide range of artistic expressions, from graphic design to 
+                    photography, and be inspired by the diversity of our creative community.
+                </p>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="container">
+                <h2 class="features-main-title">
+                    Discover What <span class="text-highlight">CR8TIVES</span> Can Do!
+                </h2>
+                <div class="features-content">
+                    <div class="features-text-content">
+                        <article class="feature-item">
+                            <h3 class="feature-item-title">Creative Networking</h3>
+                            <p class="feature-item-description">
+                                Connecting Creative Professionals And Enabling Them To Build Their Professional Network, 
+                                Fostering Collaboration And Connections Within The Creative Community.
+                            </p>
+                        </article>
+                        <article class="feature-item">
+                            <h3 class="feature-item-title">Portfolio Showcase</h3>
+                            <p class="feature-item-description">
+                                Allowing Users To Showcase Their Creative Work And Talents, Creating A Dynamic And Captivating 
+                                Online Portfolio To Attract Opportunities.
+                            </p>
+                        </article>
+                        <article class="feature-item">
+                            <h3 class="feature-item-title">Job Discovery</h3>
+                            <p class="feature-item-description">
+                                Providing A Platform Where Users Can Discover And Apply For Job Opportunities Relevant To Their 
+                                Creative Skills And Interests, Facilitating Career Growth Within The Creative Industry.
+                            </p>
+                        </article>
+                    </div>
+                    <div class="features-image-content">
+                        <img src="https://placehold.co/280x580/e0e0e0/333333?text=App+Features+Mockup" alt="Phone showing app features">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2 class="cta-title">
+                    Ready To Spark Your Creative Journey? Dive<br>
+                    Into A World Of Imagination And Opportunity<br>
+                    With <span class="text-highlight">CR8TIVES</span>.
+                </h2>
+                <a href="#" class="btn btn-primary">Get App</a>
+            </div>
+        </section>
+
+        <section class="app-gallery-section">
+            <div class="container">
+                <div class="app-gallery-layout"> <div class="app-gallery-top-row"> <div class="gallery-main-image-container">
+                            <img src="https://placehold.co/270x550/E0E0E0/333333?text=Profile+Screen" alt="App Profile Screen">
+                        </div>
+                        <div class="gallery-side-images-container">
+                            <div class="gallery-side-image-item">
+                                <img src="https://placehold.co/320x190/F0F0F0/333333?text=Messages" alt="App Messages Screen Snippet">
+                            </div>
+                            <div class="gallery-side-image-item">
+                                <img src="https://placehold.co/320x130/F5F5F5/333333?text=Visual+Design" alt="App Visual Design Screen Snippet">
+                            </div>
+                            <div class="gallery-side-image-item">
+                                <img src="https://placehold.co/320x160/FAFAFA/333333?text=Job+Description" alt="App Job Description Screen Snippet">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-logo-banner-container">
+                        <img src="https://placehold.co/700x200/333333/FFFFFF?text=CREOOIVES" alt="Creoives Logo Banner">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer-main">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Say Hi</h4>
+                    <div class="footer-social-links">
+                        <a href="#" title="X (Twitter)">X</a>
+                        <a href="#" title="Instagram">Instagram</a>
+                        <a href="#" title="LinkedIn">LinkedIn</a>
+                        <a href="#" title="Behance">Behance</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Portfolios</a></li>
+                        <li><a href="#">Messaging</a></li>
+                        <li><a href="#">Give me Gigs!</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="#">Company Policy</a></li>
+                        <li><a href="#">Customer Care</a></li>
+                        <li><a href="#">+234 8143317161</a></li> 
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom-logo">
+                <div class="footer-logo-text">
+                    <span class="logo-cre">CRE</span><span class="logo-ooives">OOIVES</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
